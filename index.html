@@ -204,7 +204,7 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('assets/hero.jpg');
+      background-image: url('https://www.himona.de/wp-content/uploads/2024/12/ambulanter-pflegedienst-muenchen-himona.jpg');
       background-size: cover;
       background-position: center 30%;
       filter: brightness(.45);
@@ -375,24 +375,33 @@
     #leistungen {}
     .leistungen-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
+    @media (max-width: 900px) { .leistungen-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .leistungen-grid { grid-template-columns: 1fr; } }
     .leistung-card {
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 24px 20px;
+      overflow: hidden;
       transition: box-shadow .2s, border-color .2s;
     }
     .leistung-card:hover {
       box-shadow: var(--shadow);
       border-color: var(--blue);
     }
+    .leistung-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+    }
+    .leistung-body { padding: 20px; }
     .leistung-icon {
-      width: 48px; height: 48px;
+      width: 44px; height: 44px;
       background: var(--blue-light);
-      border-radius: 12px;
+      border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
       font-size: 1.5rem;
       margin-bottom: 14px;
@@ -582,11 +591,12 @@
     ══════════════════════════════════ */
     #partner {}
     .partner-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 20px;
     }
+    @media (max-width: 900px) { .partner-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 500px) { .partner-grid { grid-template-columns: 1fr; } }
     .partner-card {
       background: var(--white);
       border: 1px solid var(--border);
@@ -1098,49 +1108,71 @@
 
     <div class="leistungen-grid">
       <div class="leistung-card">
-        <div class="leistung-icon">🛁</div>
-        <div class="leistung-title">Grundpflege</div>
-        <p class="leistung-desc">Körperpflege, An-/Ausziehen, Unterstützung bei der Nahrungsaufnahme und Mobilitätsförderung im Alltag.</p>
+        <img class="leistung-img" src="https://www.himona.de/wp-content/uploads/2024/12/grundpflege-ambulanter-pflegedienst-muenchen.jpg" alt="Grundpflege" loading="lazy">
+        <div class="leistung-body">
+          <div class="leistung-icon">🛁</div>
+          <div class="leistung-title">Grundpflege</div>
+          <p class="leistung-desc">Körperpflege, An-/Ausziehen, Unterstützung bei der Nahrungsaufnahme und Mobilitätsförderung im Alltag.</p>
+        </div>
       </div>
       <div class="leistung-card">
-        <div class="leistung-icon">💊</div>
-        <div class="leistung-title">Behandlungspflege</div>
-        <p class="leistung-desc">Wundversorgung, Medikamentengabe, Blutzucker- und Blutdruckmessung durch examinierte Pflegefachkräfte.</p>
+        <img class="leistung-img" src="https://www.himona.de/wp-content/uploads/2024/12/behandlungspflege-ambulanter-pflegedienst-muenchen.jpg" alt="Behandlungspflege" loading="lazy">
+        <div class="leistung-body">
+          <div class="leistung-icon">💊</div>
+          <div class="leistung-title">Behandlungspflege</div>
+          <p class="leistung-desc">Wundversorgung, Medikamentengabe, Blutzucker- und Blutdruckmessung durch examinierte Pflegefachkräfte.</p>
+        </div>
       </div>
       <div class="leistung-card">
-        <div class="leistung-icon">☀️</div>
-        <div class="leistung-title">Häusliche Betreuung</div>
-        <p class="leistung-desc">Alltagsgestaltung, soziale Kontakte erhalten, Begleitung bei Freizeitaktivitäten und Arztbesuchen.</p>
+        <img class="leistung-img" src="https://www.himona.de/wp-content/uploads/2024/12/haeussliche-betreuung-ambulanter-pflegedienst-muenchen.jpg" alt="Häusliche Betreuung" loading="lazy">
+        <div class="leistung-body">
+          <div class="leistung-icon">☀️</div>
+          <div class="leistung-title">Häusliche Betreuung</div>
+          <p class="leistung-desc">Alltagsgestaltung, soziale Kontakte erhalten, Begleitung bei Freizeitaktivitäten und Arztbesuchen.</p>
+        </div>
       </div>
       <div class="leistung-card">
-        <div class="leistung-icon">🏠</div>
-        <div class="leistung-title">Hauswirtschaft</div>
-        <p class="leistung-desc">Zubereitung von Mahlzeiten, Medikamenten-Management, Wohnungsreinigung und Einkaufshilfe.</p>
+        <img class="leistung-img" src="https://www.himona.de/wp-content/uploads/2024/12/hauswirtschaftliche-hilfe-ambulanter-pflegedienst-muenchen.jpg" alt="Hauswirtschaft" loading="lazy">
+        <div class="leistung-body">
+          <div class="leistung-icon">🏠</div>
+          <div class="leistung-title">Hauswirtschaft</div>
+          <p class="leistung-desc">Zubereitung von Mahlzeiten, Medikamenten-Management, Wohnungsreinigung und Einkaufshilfe.</p>
+        </div>
       </div>
       <div class="leistung-card">
-        <div class="leistung-icon">🔄</div>
-        <div class="leistung-title">Verhinderungspflege</div>
-        <p class="leistung-desc">Professionelle Vertretung wenn die pflegende Person selbst Urlaub, Krankheit oder Auszeit benötigt.</p>
+        <div class="leistung-body">
+          <div class="leistung-icon">🔄</div>
+          <div class="leistung-title">Verhinderungspflege</div>
+          <p class="leistung-desc">Professionelle Vertretung wenn die pflegende Person selbst Urlaub, Krankheit oder Auszeit benötigt.</p>
+        </div>
       </div>
       <div class="leistung-card">
-        <div class="leistung-icon">🌙</div>
-        <div class="leistung-title">24h-Pflege</div>
-        <p class="leistung-desc">Rund-um-die-Uhr-Betreuung für Menschen mit erhöhtem Pflegebedarf — zuverlässig, sicher, zu Hause.</p>
+        <div class="leistung-body">
+          <div class="leistung-icon">🌙</div>
+          <div class="leistung-title">24h-Pflege</div>
+          <p class="leistung-desc">Rund-um-die-Uhr-Betreuung für Menschen mit erhöhtem Pflegebedarf — zuverlässig, sicher, zu Hause.</p>
+        </div>
       </div>
       <div class="leistung-card">
-        <div class="leistung-icon">🍽️</div>
-        <div class="leistung-title">Künstliche Ernährung</div>
-        <p class="leistung-desc">Fachgerechte Versorgung bei Sondenernährung und parenteraler Ernährung durch geschultes Pflegepersonal.</p>
+        <div class="leistung-body">
+          <div class="leistung-icon">🍽️</div>
+          <div class="leistung-title">Künstliche Ernährung</div>
+          <p class="leistung-desc">Fachgerechte Versorgung bei Sondenernährung und parenteraler Ernährung durch geschultes Pflegepersonal.</p>
+        </div>
       </div>
       <div class="leistung-card">
-        <div class="leistung-icon">🕊️</div>
-        <div class="leistung-title">Palliativpflege</div>
-        <p class="leistung-desc">Würdevolle Begleitung und Schmerzmanagement in der letzten Lebensphase — für Patient und Familie.</p>
+        <div class="leistung-body">
+          <div class="leistung-icon">🕊️</div>
+          <div class="leistung-title">Palliativpflege</div>
+          <p class="leistung-desc">Würdevolle Begleitung und Schmerzmanagement in der letzten Lebensphase — für Patient und Familie.</p>
+        </div>
       </div>
       <div class="leistung-card">
-        <div class="leistung-icon">📋</div>
-        <div class="leistung-title">Pflegeberatung</div>
-        <p class="leistung-desc">Kostenlose Begleitung bei Pflegegutachten, Ämtern, Kranken- und Pflegekasse sowie allen Behörden.</p>
+        <div class="leistung-body">
+          <div class="leistung-icon">📋</div>
+          <div class="leistung-title">Pflegeberatung</div>
+          <p class="leistung-desc">Kostenlose Begleitung bei Pflegegutachten, Ämtern, Kranken- und Pflegekasse sowie allen Behörden.</p>
+        </div>
       </div>
     </div>
   </div>
