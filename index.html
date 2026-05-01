@@ -431,13 +431,19 @@
     #pflegegrad { background: var(--white); }
     .pflegegrad-intro {
       background: var(--blue-light);
+      border-left: 3px solid var(--blue);
       border-radius: var(--radius);
-      padding: 20px 28px;
+      padding: 16px 20px;
       margin-bottom: 36px;
-      font-size: 0.97rem;
+      font-size: 0.92rem;
       color: var(--blue-dark);
-      font-weight: 600;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      line-height: 1.5;
     }
+    .pflegegrad-intro svg { flex-shrink: 0; opacity: .7; }
     .pflegegrad-table {
       width: 100%;
       border-collapse: collapse;
@@ -1216,7 +1222,8 @@
     <p class="section-sub">Mit einem anerkannten Pflegegrad übernimmt die Pflegekasse einen Großteil der Kosten. Wir helfen Ihnen kostenlos beim Antrag.</p>
 
     <div class="pflegegrad-intro">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:6px;flex-shrink:0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg> Die folgende Tabelle zeigt die monatlichen Pflegesachleistungen (§ 36 SGB XI), die Ihnen bei ambulanter Pflege zustehen. Alle Angaben Stand 2024.
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <span>Monatliche Pflegesachleistungen (§ 36 SGB XI) bei ambulanter Pflege — was Ihre Pflegekasse übernimmt. Stand 2024.</span>
     </div>
 
     <table class="pflegegrad-table">
