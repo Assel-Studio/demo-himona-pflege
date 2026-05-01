@@ -8,9 +8,8 @@
   <meta property="og:title" content="Himona Pflegedienst München | 5,0 Sterne · Meistbewertet">
   <meta property="og:description" content="Ambulante Pflege in München West & Mitte. 5,0★ / 40 Bewertungen. 24h erreichbar.">
   <meta property="og:image" content="assets/hero.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=playfair-display:400,700|nunito:400,600,700&display=swap" rel="stylesheet">
   <style>
     /* ── Reset & Base ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1495,6 +1494,12 @@
             <label for="f-msg">Ihre Nachricht</label>
             <textarea id="f-msg" placeholder="Was können wir für Sie tun? Kein Anliegen ist zu klein …"></textarea>
           </div>
+          <div class="form-group" style="display:flex;align-items:flex-start;gap:10px;margin-top:4px;">
+            <input type="checkbox" id="f-dsgvo" required style="margin-top:4px;flex-shrink:0;accent-color:var(--blue);width:16px;height:16px;">
+            <label for="f-dsgvo" style="font-size:0.82rem;color:var(--text-muted);font-weight:500;cursor:pointer;">
+              Ich habe die <a href="datenschutz.html" target="_blank" style="color:var(--blue);text-decoration:underline;">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu. *
+            </label>
+          </div>
           <button type="submit" class="btn btn-green form-submit">
             Anfrage kostenlos absenden →
           </button>
@@ -1580,9 +1585,8 @@
     <div class="footer-bottom">
       <span>© 2024 Himona Pflegedienst München · Wotanstraße 37 · 80639 München</span>
       <div style="display:flex;gap:20px;">
-        <a href="#">Impressum</a>
-        <a href="#">Datenschutz</a>
-        <a href="#">Barrierefreiheit</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
       </div>
     </div>
   </div>
